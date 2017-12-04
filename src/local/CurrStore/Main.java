@@ -1,26 +1,15 @@
 package local.CurrStore;
 
-import local.CurrStore.config.ConfigKeys;
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.configuration.XMLConfiguration;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.text.ParseException;
-import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.*;
-import java.util.regex.Pattern;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
-
-    private final static String configFile = "config.xml";
-    private final static String initCurFile = "initCur.txt";
-    private List<Object> currs;
-
-    private ConcurrentHashMap<String, Currency> currencyMap = new ConcurrentHashMap<>();
-
 
     public static void main(String[] args) {
         try {
@@ -32,14 +21,7 @@ public class Main {
         }
     }
 
-    private Main() throws ConfigurationException, ParseException {
-        XMLConfiguration config = new XMLConfiguration(configFile);
-        config.setListDelimiter(',');
-        //разрешенные валюты
-        currs = config.getList(ConfigKeys.CURR);
-
-        if (currs == null || currs.size() == 0)
-            throw new ParseException("Не найден конфиг с валютами", 0);
+    private Main() throws ParseException, FileNotFoundException {
 
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newScheduledThreadPool(1);
@@ -47,27 +29,22 @@ public class Main {
         scheduledExecutorService.scheduleAtFixedRate(
                 () ->
                 {
-                    currencyMap.keySet().stream()
+                    CurPay.getCurrencyMap().keySet().stream()
                             .filter(
-                                    (curName) -> currencyMap.get(curName).getBill().compareTo(new BigDecimal(0)) != 0
+                                    (curName) -> CurPay.getCurrencyMap().get(curName).getBill().compareTo(new BigDecimal(0)) != 0
                             )
                             .forEach(
                                     (curName) ->
                                     {
-                                        System.out.println(curName + " " + currencyMap.get(curName).getBill().toString());
+                                        System.out.println(curName + " " + CurPay.getCurrencyMap().get(curName).getBill().toString());
                                     }
                             );
 
                 }, 0, 1, TimeUnit.MINUTES
         );
 
-        //ввод с файла
-        try {
-            initCurFromFile();
-        } catch (FileNotFoundException fne) {
-            System.out.println("Файл не найден");
-        }
-
+        CurPay curPay = new CurPay();
+        curPay.initCurFromFile();
         //ввод из консоли
         Scanner keyboard = new Scanner(System.in);
         while (true) {
@@ -76,48 +53,13 @@ public class Main {
             if (inputString.equalsIgnoreCase("q"))
                 System.exit(0);
 
-            if (!isCurCodeInAccess(inputString))
+            if (!curPay.isCurCodeInAccess(inputString))
                 throw new ParseException("Неверная валюта", 0);
 
             String[] splitStr = inputString.split(" ");
-            addToCurHashMap(splitStr[0], splitStr[1]);
+            curPay.addToCurHashMap(splitStr[0], splitStr[1]);
         }
+
     }
 
-    private void initCurFromFile() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File(initCurFile));
-
-        while (scanner.hasNext()) {
-            String fileString = scanner.nextLine();
-
-            if (isCurCodeInAccess(fileString)) {
-                String[] splitStr = fileString.split(" ");
-                addToCurHashMap(splitStr[0], splitStr[1]);
-            }
-        }
-        scanner.close();
-    }
-
-    private boolean isCurCodeInAccess(String cCode) {
-        return (currs.stream().anyMatch(cur -> (cCode.split(" "))[0].equalsIgnoreCase(cur.toString())));
-    }
-
-
-    private void addToCurHashMap(String curName, String curValue) {
-        String regex = "[-]?[0-9]*\\.?,?[0-9]+";
-        Pattern pattern = Pattern.compile(regex);
-
-        if (!pattern.matcher(curValue).matches())
-            return;
-
-        if (!currencyMap.containsKey(curName.toUpperCase()))
-            currencyMap.put(curName.toUpperCase(), new Currency(curValue, new BigDecimal(curValue)));
-        else {
-            Currency currency = currencyMap.get(curName.toUpperCase());
-            currency.addPaysHistory(curValue);
-            currency.addBill(new BigDecimal(curValue));
-
-            currencyMap.replace(curName, currency);
-        }
-    }
 }
