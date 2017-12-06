@@ -13,6 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
         try {
+            if (args.length > 0){
+                CurPay.setInitCurFile(args[0]);
+            }
+
             new Main();
 
         } catch (Exception e) {

@@ -10,9 +10,13 @@ import java.util.regex.Pattern;
 public class CurPay {
     private static List<String> currs;
     private final static String configFile = "configCurs.txt";
-    private final static String initCurFile = "initCur.txt";
+    private static String initCurFile = "initCur.txt";
     private FileReader fileReader;
     private static ConcurrentHashMap<String, Currency> currencyMap = new ConcurrentHashMap<>();
+
+    public static void setInitCurFile(String initCurFile) {
+        CurPay.initCurFile = initCurFile;
+    }
 
     public static ConcurrentHashMap<String, Currency> getCurrencyMap() {
         return currencyMap;
