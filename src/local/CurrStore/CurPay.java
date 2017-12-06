@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class CurPay {
     private static List<String> currs;
-    private final static String configFile = "configCurs.txt";
+    private final static String configFile = "Resources/configCurs.properties";
     private static String initCurFile = "initCur.txt";
     private FileReader fileReader;
     private static ConcurrentHashMap<String, Currency> currencyMap = new ConcurrentHashMap<>();
