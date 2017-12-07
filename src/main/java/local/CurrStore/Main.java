@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            if (args.length > 0){
+            if (args.length > 0) {
                 CurPay.setInitCurFile(args[0]);
             }
 
@@ -52,16 +52,29 @@ public class Main {
         //ввод из консоли
         Scanner keyboard = new Scanner(System.in);
         while (true) {
-            String inputString = keyboard.nextLine();
+            String inputString = keyboard.nextLine().toUpperCase();
 
-            if (inputString.equalsIgnoreCase("q"))
-                System.exit(0);
+            switch (inputString) {
+                case "Q":
+                    System.exit(0);
+                    break;
+                case "HISTORY":
+                    CurPay.getCurrencyMap().keySet()
+                            .forEach(
+                                    (curName) ->
+                                    {
+                                        System.out.println(curName + " -> \n " + CurPay.getCurrencyMap().get(curName).toString());
+                                    }
+                            );
+                    break;
+                default:
+                    if (!curPay.isCurCodeInAccess(inputString))
+                        throw new ParseException("Неверная валюта", 0);
 
-            if (!curPay.isCurCodeInAccess(inputString))
-                throw new ParseException("Неверная валюта", 0);
-
-            String[] splitStr = inputString.split(" ");
-            curPay.addToCurHashMap(splitStr[0], splitStr[1]);
+                    String[] splitStr = inputString.split(" ");
+                    curPay.addToCurHashMap(splitStr[0], splitStr[1]);
+                    break;
+            }
         }
 
     }

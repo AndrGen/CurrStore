@@ -10,6 +10,8 @@ public class Currency {
 
     private BigDecimal bill;
 
+    private String payHistResult = "";
+
     public void addPaysHistory(String pay) {
         this.paysHistory.add(pay);
     }
@@ -25,5 +27,11 @@ public class Currency {
     public Currency(String pay, BigDecimal bill) {
         this.paysHistory.add(pay);
         this.bill = bill;
+    }
+
+    @Override
+    public String toString() {
+        this.paysHistory.forEach(pay -> payHistResult += pay + "; ");
+        return payHistResult;
     }
 }

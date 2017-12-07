@@ -1,5 +1,6 @@
 package local.CurrStore;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -9,7 +10,10 @@ import java.util.regex.Pattern;
 
 public class CurPay {
     private static List<String> currs;
-    private final static String configFile = "Resources/configCurs.properties";
+    private final static String configFile = "configCurs.properties";
+
+
+
     private static String initCurFile = "initCur.txt";
     private FileReader fileReader;
     private static ConcurrentHashMap<String, Currency> currencyMap = new ConcurrentHashMap<>();
@@ -27,7 +31,13 @@ public class CurPay {
     {
         fileReader = new FileReaderConfigCur();
         //разрешенные валюты
-        currs = fileReader.read(configFile, "");
+
+        String workingDirectory = System.getProperty("user.dir");
+        String absoluteFilePath = "";
+
+        absoluteFilePath = workingDirectory + File.separator + "resources" + File.separator + configFile;
+
+        currs = fileReader.read(absoluteFilePath, "");
 
         if (currs == null || currs.size() == 0)
             throw new ParseException("Не найден конфиг с валютами", 0);
