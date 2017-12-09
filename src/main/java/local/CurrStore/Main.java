@@ -17,7 +17,7 @@ public class Main {
                 CurPay.setInitCurFile(args[0]);
             }
 
-            new Main();
+            new Main("");
 
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
@@ -25,7 +25,7 @@ public class Main {
         }
     }
 
-    private Main() throws ParseException, FileNotFoundException {
+    public Main(String fileNamePart) throws ParseException, FileNotFoundException {
 
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newScheduledThreadPool(1);
@@ -48,7 +48,7 @@ public class Main {
         );
 
         CurPay curPay = new CurPay();
-        curPay.initCurFromFile();
+        curPay.initCurFromFile(fileNamePart);
         //ввод из консоли
         Scanner keyboard = new Scanner(System.in);
         while (true) {

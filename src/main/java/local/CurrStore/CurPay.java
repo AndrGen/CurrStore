@@ -27,7 +27,7 @@ public class CurPay {
     }
 
 
-    public void initCurFromFile() throws FileNotFoundException, ParseException
+    public void initCurFromFile(String fileNamePart) throws FileNotFoundException, ParseException
     {
         fileReader = new FileReaderConfigCur();
         //разрешенные валюты
@@ -35,7 +35,7 @@ public class CurPay {
         String workingDirectory = System.getProperty("user.dir");
         String absoluteFilePath = "";
 
-        absoluteFilePath = workingDirectory + File.separator + "resources" + File.separator + configFile;
+        absoluteFilePath = workingDirectory + File.separator + fileNamePart + "resources" + File.separator + configFile;
 
         currs = fileReader.read(absoluteFilePath, "");
 

@@ -1,0 +1,12 @@
+USD 100
+RUB 1
+CZK 100
+RUB -10
+text ttt
+usd 1 2
+usd 12.32
+czk -1.3
+awg 1
+awg -1
+aud 0
+RUB ttt
