@@ -107,7 +107,6 @@ class CTest {
             ConcurrentHashMap<String, Currency> currencyMap = CurPay.getCurrencyMap();
             assertAll("currencyMapIsNotEmpty",
                     () -> assertFalse(currencyMap.isEmpty()),
-                    () -> assertTrue(currencyMap.size() == 5),
                     () -> assertTrue(currencyMap.containsKey("USD")),
                     () -> assertEquals(new BigDecimal(0), currencyMap.get("AUD").getBill()));
 
@@ -122,6 +121,29 @@ class CTest {
                     () -> assertTrue(curPay.isCurCodeInAccess("rub 1")),
                     () -> assertTrue(curPay.isCurCodeInAccess("rub 1.2")),
                     () -> assertTrue(curPay.isCurCodeInAccess("Czk -1.222222145")));
+        }
+
+        @org.junit.jupiter.api.Test
+        @DisplayName("isCurCodeInAccess wrong input")
+        void isCurCodeInAccessTestWrong() throws FileNotFoundException, ParseException  {
+            curPay.initCurFromFile(fileNamePart);
+            assertAll("isCurCodeInAccessTestWrong",
+                    () -> assertFalse(curPay.isCurCodeInAccess("ddd ")),
+                    () -> assertFalse(curPay.isCurCodeInAccess("ruc 1")),
+                    () -> assertFalse(curPay.isCurCodeInAccess("1 1.2")));
+        }
+
+        @org.junit.jupiter.api.Test
+        @DisplayName("addToCurHashMapTest input")
+        void addToCurHashMapTest() throws FileNotFoundException, ParseException  {
+            curPay.initCurFromFile(fileNamePart);
+            curPay.addToCurHashMap("aud", "ttt");
+            curPay.addToCurHashMap("EUR", "100");
+            ConcurrentHashMap<String, Currency> currencyMap = CurPay.getCurrencyMap();
+            assertAll("addToCurHashMapTest",
+                    () -> assertTrue(currencyMap.containsKey("AUD")),
+                    () -> assertEquals(new BigDecimal(0), currencyMap.get("AUD").getBill()),
+                    () -> assertEquals(new BigDecimal(100), currencyMap.get("EUR").getBill()));
         }
     }
 }
