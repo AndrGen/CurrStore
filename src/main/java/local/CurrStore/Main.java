@@ -1,6 +1,9 @@
 package local.CurrStore;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -11,6 +14,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
+
+    public static Logger getLogger() {
+        return logger;
+    }
+
     public static void main(String[] args) {
         try {
             if (args.length > 0) {
@@ -19,6 +28,7 @@ public class Main {
 
             new Main("");
 
+            logger.info("Старт приложения");
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
             e.printStackTrace();
