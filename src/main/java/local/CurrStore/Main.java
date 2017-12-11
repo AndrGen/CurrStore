@@ -28,7 +28,7 @@ public class Main {
 
             new Main("");
 
-            logger.info("Старт приложения");
+            logger.debug("Старт приложения");
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
             e.printStackTrace();
