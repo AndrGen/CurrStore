@@ -7,13 +7,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FileReaderConfigCur implements FileReader {
-    public List<String> read(String name, String delimeter)  throws FileNotFoundException {
+    public List<String> read(String name, String delimeter) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(name));
         List<String> curCodes = new ArrayList<>();
         while (scanner.hasNext()) {
-             curCodes.add(scanner.nextLine());
+            curCodes.add(scanner.nextLine());
         }
-       scanner.close();
-       return curCodes;
+        scanner.close();
+
+        Main.getLogger().debug("curCodes.size() = {}", curCodes.size());
+
+        return curCodes;
     }
 }

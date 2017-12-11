@@ -15,6 +15,8 @@ public class FileReaderInitCur implements FileReader {
             if (curPay.isCurCodeInAccess(fileString)) {
                 String[] splitStr = fileString.split(" ");
                 curPay.addToCurHashMap(splitStr[0], splitStr[1]);
+
+                Main.getLogger().debug("init_file.add cur_code = {}, cur_value = {}", splitStr[0], splitStr[1]);
             }
         }
         scanner.close();

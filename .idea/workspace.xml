@@ -7,12 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9053eeca-6dba-4db5-9722-fbc983e1fbdd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_8_0_beta0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_8_0_beta0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_8_0_beta0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CurrStore.iml" afterPath="$PROJECT_DIR$/CurrStore.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java" afterPath="$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java" afterPath="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java" afterPath="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/local/CurrStore/Main.java" afterPath="$PROJECT_DIR$/src/main/java/local/CurrStore/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="CurPay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+            <state relative-caret-position="397">
+              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,22 +47,40 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="335">
+              <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileReaderConfigCur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileReaderInitCur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="493">
+              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -78,9 +100,11 @@
     <findStrings>
       <find />
       <find>Resources\configCurs</find>
+      <find>%</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>{}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -105,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/local/CurrStore/CurPay.java" />
         <option value="$PROJECT_DIR$/src/local/CurrStore/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/Currency.java" />
-        <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestCur.java" />
         <option value="$PROJECT_DIR$/src/test/java/local/CurrStoreTest/TestCur.java" />
         <option value="$PROJECT_DIR$/src/test/java/local/CurrStore/TestCur.java" />
@@ -113,9 +136,13 @@
         <option value="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.1/junit-platform-commons-1.0.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class" />
         <option value="$PROJECT_DIR$/src/test/java/local/CurrStore/CTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logging.xml" />
+        <option value="$PROJECT_DIR$/src/logback.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java" />
+        <option value="$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java" />
       </list>
     </option>
   </component>
@@ -169,9 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,7 +242,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,21 +256,23 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Repository\CurrStore\src\Prop" />
-      <recent name="D:\Repository\CurrStore\src" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="local.CurrStoreTest" />
       <recent name="local.CurrStore" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="local.CurrStore.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Repository\CurrStore\src\main\resources" />
       <recent name="C:\Users\Андрей\IdeaProjects\CurrStore\src\test\resources" />
       <recent name="D:\Repository\CurrStore" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="local.CurrStore.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Андрей\IdeaProjects\CurrStore\src\main\resources" />
+      <recent name="C:\Users\Андрей\IdeaProjects\CurrStore\src" />
+      <recent name="D:\Repository\CurrStore\src\Prop" />
+      <recent name="D:\Repository\CurrStore\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,6 +368,12 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -373,12 +408,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Test" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
@@ -409,77 +438,78 @@
       <workItem from="1512754060017" duration="1017000" />
       <workItem from="1512813751198" duration="23149000" />
       <workItem from="1512997495836" duration="5520000" />
+      <workItem from="1513009451501" duration="5272000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2017.12.10 at 12h 26m 16s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 52m 11s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 26m 39s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 53m 03s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 27m 22s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 53m 41s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 28m 50s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 54m 40s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 32m 02s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 57m 23s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 34m 12s.xml">
+    <history-entry file="Test - 2017.12.11 at 19h 58m 50s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 35m 26s.xml">
+    <history-entry file="Test - 2017.12.11 at 20h 00m 54s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.10 at 12h 36m 13s.xml">
+    <history-entry file="Test - 2017.12.11 at 20h 17m 37s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.11 at 17h 48m 12s.xml">
+    <history-entry file="Test - 2017.12.11 at 20h 18m 02s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2017.12.11 at 18h 23m 01s.xml">
+    <history-entry file="Test - 2017.12.11 at 20h 18m 07s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72063000" />
+    <option name="totallyTimeSpent" value="77335000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13006397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20788912" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21002132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39719626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39687848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +529,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/local/CurrStore/Currency.java" />
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/src/local/CurrStore/FileReader.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -557,34 +586,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/Currency.java" />
     <entry file="file://$MAVEN_REPOSITORY$/org/junit/junit5-engine/5.0.0-ALPHA/junit5-engine-5.0.0-ALPHA.pom" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/initCur.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="e#751#752#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.1/junit-platform-commons-1.0.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -596,38 +598,61 @@
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/local.CurrStore.CTest.txt" />
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/TEST-local.CurrStore.CTest.xml" />
     <entry file="file://$PROJECT_DIR$/src/test/java/local/CurrStore/CTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="137">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        <state relative-caret-position="493">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="335">
+          <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/CurPay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="397">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderConfigCur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/local/CurrStore/FileReaderInitCur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
           <folding />
         </state>
       </provider>

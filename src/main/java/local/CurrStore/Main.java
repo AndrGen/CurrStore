@@ -26,12 +26,13 @@ public class Main {
                 CurPay.setInitCurFile(args[0]);
             }
 
-            new Main("");
+            logger.info("Start application");
 
-            logger.debug("Старт приложения");
+            new Main("");
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
             e.printStackTrace();
+            logger.error("Error: ", e);
         }
     }
 
@@ -66,9 +67,11 @@ public class Main {
 
             switch (inputString) {
                 case "Q":
+                    logger.info("End application");
                     System.exit(0);
                     break;
                 case "HISTORY":
+                    logger.info("Get history");
                     CurPay.getCurrencyMap().keySet()
                             .forEach(
                                     (curName) ->
@@ -79,7 +82,7 @@ public class Main {
                     break;
                 default:
                     if (!curPay.isCurCodeInAccess(inputString))
-                        throw new ParseException("Неверная валюта", 0);
+                        throw new ParseException("Wrong currency", 0);
 
                     String[] splitStr = inputString.split(" ");
                     curPay.addToCurHashMap(splitStr[0], splitStr[1]);

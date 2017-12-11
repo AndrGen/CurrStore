@@ -40,13 +40,14 @@ public class CurPay {
         currs = fileReader.read(absoluteFilePath, "");
 
         if (currs == null || currs.size() == 0)
-            throw new ParseException("Не найден конфиг с валютами", 0);
+            throw new ParseException("Currency config not found", 0);
         //ввод с файла
         try {
             fileReader = new FileReaderInitCur();
             fileReader.read(initCurFile, " ");
         } catch (FileNotFoundException fne) {
-            System.out.println("Файл не найден");
+            System.out.println("Currency init file not found");
+            Main.getLogger().warn("Currency init file not found");
         }
     }
 
@@ -72,5 +73,7 @@ public class CurPay {
 
             currencyMap.replace(curName, currency);
         }
+
+        Main.getLogger().debug("curName = {}, curValue = {}", curName, curValue);
     }
 }
