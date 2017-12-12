@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="CurrStore:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/CurrStore_jar</output-path>
-    <root id="archive" name="CurrStore.jar">
-      <element id="module-output" name="CurrStore" />
-    </root>
-  </artifact>
-</component>
