@@ -1,4 +1,4 @@
-package local.CurrStore;
+package ru.achebykin.currstore;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

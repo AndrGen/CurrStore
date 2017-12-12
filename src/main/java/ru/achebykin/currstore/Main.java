@@ -1,4 +1,4 @@
-package local.CurrStore;
+package ru.achebykin.currstore;
 
 
 import org.slf4j.Logger;

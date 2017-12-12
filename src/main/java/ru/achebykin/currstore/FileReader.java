@@ -1,4 +1,4 @@
-package local.CurrStore;
+package ru.achebykin.currstore;
 
 import java.io.FileNotFoundException;
 import java.util.List;
